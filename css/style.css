@@ -29,8 +29,7 @@
   --cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 24 24'%3E%3Cpath d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z' fill='%23ff2e7e' stroke='%23fff' stroke-width='1.6'/%3E%3C/svg%3E") 14 13, auto;
   --cursor-hot: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath d='M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z' fill='%23ffc857' stroke='%23ff2e7e' stroke-width='1.8'/%3E%3C/svg%3E") 16 15, pointer;
   color-scheme: dark;
-  scrollbar-color: var(--pink) #1c0610;
-  scrollbar-width: thin;
+  scrollbar-width: none;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -56,11 +55,9 @@ button { font: inherit; color: inherit; }
 /* Ícones Lucide (sprite inline) */
 .ic { width: 1.1em; height: 1.1em; flex: none; display: inline-block; vertical-align: -.17em; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-/* Barra de rolagem nas cores do site */
-::-webkit-scrollbar { width: 10px; height: 10px; }
-::-webkit-scrollbar-track { background: #1c0610; }
-::-webkit-scrollbar-thumb { background: linear-gradient(180deg, var(--pink), var(--gold)); border-radius: 99px; border: 2px solid #1c0610; }
-::-webkit-scrollbar-thumb:hover { background: linear-gradient(180deg, var(--pink-2), var(--gold-2)); }
+/* Sem barra de rolagem visível (a página continua rolando) */
+html { -ms-overflow-style: none; }
+::-webkit-scrollbar { display: none; width: 0; height: 0; }
 
 /* Progresso da página no topo */
 #scroll-progress {
